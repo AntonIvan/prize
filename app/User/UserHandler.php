@@ -37,7 +37,8 @@ class UserHandler
     function sendUser($count) {
         $data = \DB::table('money')->limit($count)->get();
         foreach ($data as $item) {
-            
+            resolve("prize.money")->transfer($item->user_id);
         }
+        return "Средства отправлены на счет";
     }
 }

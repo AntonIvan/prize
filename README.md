@@ -2,4 +2,7 @@ First start
 
 php artisan migrate
 
-You need to perform migrations
+php artisan db:seed --class=Prize
+
+
+You need to perform migrations and seeder

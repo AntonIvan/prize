@@ -46,6 +46,18 @@ class CreateUsersTable extends Migration
             $table->string("some");
             $table->string("what");
         });
+
+        Schema::create('prize_things', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string("what");
+        });
+
+        Schema::create('prize_money', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string("money");
+        });
+
+
     }
 
     /**
@@ -60,5 +72,7 @@ class CreateUsersTable extends Migration
         Schema::dropIfExists('things');
         Schema::dropIfExists('time');
         Schema::dropIfExists('users');
+        Schema::dropIfExists('prize_things');
+        Schema::dropIfExists('prize_money');
     }
 }

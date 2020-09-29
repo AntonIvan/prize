@@ -42,6 +42,6 @@ class SendMoney extends Command
             echo "Число пользователей больше 0\n";
             return false;
         }
-        resolve(UserHandler::class)->sendUser($this->option('count'));
+        echo resolve(UserHandler::class)->sendUser($this->option('count'))."\n";
     }
 }

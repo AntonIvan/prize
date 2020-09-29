@@ -82,7 +82,7 @@ $(document).ready(function(){
             url: '/api/deleteprize',
             success: function (data) {
                 alert("Вы отказались от приза");
-                //location.reload();
+                location.reload();
             },
             error: function (data) {
                 alert("Произошла ошибка");
